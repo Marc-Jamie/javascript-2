@@ -27,3 +27,28 @@ console.log(`
 - Choose a font from https://fonts.google.com/
 - Use the font for your card
 `);
+
+function randomN(n) {
+  return Math.round(Math.random() * n);
+}
+
+const names = ["Alex", "Jan", "Niko", "Dennis"];
+
+function randomName(array) {
+  const randomIndex = array.length - 1;
+  return array[randomN(randomIndex)];
+}
+console.log(randomName(names));
+
+const card = querySelector("#root");
+card.innerHTML =
+  /*html*/
+  `
+<header>
+        <h3>
+        <script
+        </h3>
+
+
+    </header>
+`;
