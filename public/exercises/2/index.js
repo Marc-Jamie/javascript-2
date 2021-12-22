@@ -34,21 +34,40 @@ function randomN(n) {
 
 const names = ["Alex", "Jan", "Niko", "Dennis"];
 
-function randomName(array) {
+function randomItem(array) {
   const randomIndex = array.length - 1;
   return array[randomN(randomIndex)];
 }
-console.log(randomName(names));
+const randomName = randomItem(names);
+const genderMapping = {
+  men: 99,
+  women: 99,
+  lego: 9,
+};
+const genders = Object.keys(genderMapping); //["men","women","lego"]
+console.log(
+  genders,
+  Object.values(genderMapping),
+  Object.entries(genderMapping) //2-dimensionales array
+  //[[key,value],[key,value], ...]
+);
 
-const card = querySelector("#root");
-card.innerHTML =
+const gender = randomItem(genders); //men|women|lego
+const maxIndex = genderMapping[gender]; //99|9 (99|99|9)
+const randomImageIndex = randomN(maxIndex);
+
+console.log(gender, randomName, genderMapping[gender], randomImageIndex);
+
+const card = document.querySelector("#root");
+card.innerHTML +=
   /*html*/
   `
+  <div class="card">
 <header>
         <h3>
-        <script
+        ${randomName}
         </h3>
-
-
+        <img src="https://randomuser.me/api/portraits/${gender}/${randomImageIndex}.jpg" alt="Avatar of ${randomName}" />
     </header>
+</div>
 `;
