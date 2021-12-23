@@ -20,3 +20,25 @@ console.log(`
 3. Add classes to all elements of your card
 - Add styling to the CSS file
 `);
+
+const b = ["Hallo, wie geht es dir", "b", "c", "d", "e", "f", "g"].map(function (char) {
+    return {
+        original: char,
+         uppercase: char.toUpperCase(),
+         lowercase: char.toLowerCase(),
+         array: char.split(""),
+         fancy: char.split("").join("*")
+    };
+  });
+console.log(b);
+
+const randomNumber n => Math.round(Math.random() * n)
+
+const namen = ["Julien", "Peter", "Hannes"];
+
+const people = Array.from({length: 5}).map(person =>{
+    return {
+        firstName: 
+    }
+});
+
